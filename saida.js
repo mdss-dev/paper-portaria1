@@ -1,1 +1,1 @@
-Inserir resitro de hora de saida no banco de dados
+Inserir resitro de hora de saida no banco
