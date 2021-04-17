@@ -11,7 +11,6 @@
 				<li><a href="index2.php">Cadastro de Visitantes</a></li>
 			</ul>
 		</nav>
-		<h2>teste</h2>
 		<br><br>
 	</body>
 </html>
