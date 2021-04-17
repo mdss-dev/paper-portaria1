@@ -1,7 +1,7 @@
 <?php
 	// Conexão com banco de dados
 	
-	/$link = mysqli_connect("localhost", "root", "Mrpf!@#6", "portaria");
+	$link = mysqli_connect("localhost", "root", "root", "portaria");
 	// Verifica se conectou com o banco de dados
 		if($link === false){
 			die("ERRO: Não foi possível conectar ao BD. " . mysqli_connect_error());
@@ -23,18 +23,18 @@
 <p>Consulta Visitas</p>
 	<table border=1px>
 		<tr>
-			<td>Código</td> 
-			<td>Nome</td>
-			<td>CPF / CNPJ</td>
-			<td>Identidade</td>
-			<td>Destino</td>
-			<td>Veículo</td>
-			<td>Placa</td>
-			<td>Empresa</td>
-			<td>Tipo</td>
-			<td>Observação</td>
-			<td>Data Entrada</td>
-			<td>Data Saída</td>
+			<th>Código</th> 
+			<th>Nome</th>
+			<th>CPF / CNPJ</th>
+			<th>Identidade</th>
+			<th>Destino</th>
+			<th>Veículo</th>
+			<th>Placa</th>
+			<th>Empresa</th>
+			<th>Tipo</th>
+			<th>Observação</th>
+			<th>Data Entrada</th>
+			<th>Data Saída</th>
 		</tr>
 		<tr>
 			<?php

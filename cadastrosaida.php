@@ -1,6 +1,6 @@
 <?php
 	// Conexão com banco de dados
-	$link = mysqli_connect("localhost", "root", "Mrpf!@#6", "portaria");
+	$link = mysqli_connect("localhost", "root", "root", "portaria");
 	// Verifica se conectou com o banco de dados
 		if($link === false){
 			die("ERRO: Não foi possível conectar ao BD. " . mysqli_connect_error());

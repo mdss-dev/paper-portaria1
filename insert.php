@@ -2,7 +2,7 @@
 	// Conexão com banco de dados
 	//$link = mysqli_connect("localhost", "root", "", "portaria"); //Conexão Merikson
 	//$link = mysqli_connect("localhost", "root", "", "portaria"); //Conexão Roney
-	$link = mysqli_connect("localhost", "root", "", "portaria"); //Conexão Michael
+	$link = mysqli_connect("localhost", "root", "root", "portaria"); //Conexão Michael
 	// Verifica se conectou com o banco de dados
 		if($link === false){
 			die("ERRO: Não foi possível conectar ao BD. " . mysqli_connect_error());
