@@ -55,7 +55,7 @@ input {
 /*estilo do botão submit */
 input[type="submit"]{
   font-size: 20px;
-  width: 100%!important;
+  width: 478px;
   cursor: pointer;  
   background: rgb(61, 157, 179);
   background-color:#EDEDED;

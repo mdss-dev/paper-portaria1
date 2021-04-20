@@ -1,15 +1,10 @@
 <?php
-	// Conexão com banco de dados
-	//$link = mysqli_connect("localhost", "root", "", "portaria"); //Conexão Merikson
-	//$link = mysqli_connect("localhost", "root", "", "portaria"); //Conexão Roney
-	$link = mysqli_connect("localhost", "root", "root", "portaria"); //Conexão Michael
-	// Verifica se conectou com o banco de dados
-		if($link === false){
-			die("ERRO: Não foi possível conectar ao BD. " . mysqli_connect_error());
-		}
+	// chamar o arquivo de conexão com o BD
+	require_once "conexao.php";
+
 		// variáveis criadas para obter valores dos parâmetros do formulário
 		$nome = mysqli_real_escape_string($link, $_REQUEST['nome']);
-		$cpfcnpj = mysqli_real_escape_string($link, $_REQUEST['cpfcnpj']);
+		$cpf = mysqli_real_escape_string($link, $_REQUEST['cpf']);
 		$rg = mysqli_real_escape_string($link, $_REQUEST['rg']);
 		$destino = mysqli_real_escape_string($link, $_REQUEST['destino']);
 		$veiculo = mysqli_real_escape_string($link, $_REQUEST['veiculo']);
@@ -30,13 +25,27 @@
 			}
 		}
 		// Realiza inserção do novo registro na tabela do banco de dados
-		$sql = "INSERT INTO visita (codigo, nome, cpfcnpj, rg, destino, veiculo, placa, empresa, tipo, observacao) 
-		VALUES ('$codigo', '$nome', '$cpfcnpj', '$rg', '$destino', '$veiculo', '$placa', '$empresa', '$tipo', '$observacao')";
-		if(mysqli_query($link, $sql)){
-			echo "Gravação efetuada com sucesso!";
+		$sql = "INSERT INTO visita (codigo, nome, cpf, rg, destino, veiculo, placa, empresa, tipo, observacao) 
+		VALUES ('$codigo', '$nome', '$cpf', '$rg', '$destino', '$veiculo', '$placa', '$empresa', '$tipo', '$observacao')";
+		if(mysqli_query($link, $sql)){	
+		
+		echo "<script>alert('Gravação efetuada com sucesso!'); window.location='index2.php'</script>";			
+
 			} else{
-			echo "Erro (Não foi possível inserir o registro na tabela) $sql. " . mysqli_error($link);
+			
+			echo "<script>alert('Não foi possivel realizar a gravação');</script>";			
 			}
+			
 	// Fecha conexão com o banco de dados
 	mysqli_close($link);
+
 ?>
+		<script>
+			function goBack() {
+			    window.history.back()
+			}
+		</script>
+
+		<button onclick="goBack()">Voltar</button>
+
+		

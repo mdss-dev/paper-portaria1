@@ -1,11 +1,8 @@
 <?php
-	// Conexão com banco de dados
-	$link = mysqli_connect("localhost", "root", "root", "portaria");
-	// Verifica se conectou com o banco de dados
-		if($link === false){
-			die("ERRO: Não foi possível conectar ao BD. " . mysqli_connect_error());
-		}
-	$query = "select codigo,nome FROM visita where datasaida is null;";
+	// chamar o arquivo de conexão com o BD
+	require_once "conexao.php";
+
+	$query = "select codigo,nome,dataentrada FROM visita where datasaida is null;";
 	
 	// executa a query
 	$dados = mysqli_query($link, $query) or die(mysql_error());
@@ -20,12 +17,13 @@
 	<script type="text/javascript" src="saida.js"></script>
 </head>
 <body>
-<p>Visitas em andamento</p>
+<p>Registrar saídas</p>
 	<table border=1px>
 		<tr>
-			<td>Código</td> 
-			<td>Nome</td>
-			<td>Registrar Saida</td>
+			<th>Código</th> 
+			<th>Nome</th>
+			<th>Data da Entrada</th>
+			<th>Registrar Saida</th>
 		</tr>
 		<tr>
 			<?php
@@ -36,6 +34,7 @@
 						?>
 							<td><?=$linha['codigo']?></td> 
 							<td><?=$linha['nome']?></td>
+							<td><?=$linha['dataentrada']?></td>
 							<td>
 								<div class="gravarsaida">
 									<button class="btn btn-success" type="submit" onclick="saida.js">Registrar Saida</button>
@@ -48,6 +47,9 @@
 						}while($linha = $dados -> fetch_assoc());
 				// fim do if
 				}
+				else {
+					echo "<strong>Não há registro(s) com saída(s) pendente(s)</strong><br><br>";
+				}
 			?>
 	</table><br>	
 	<?php
@@ -55,7 +57,6 @@
 // Fecha conexão com o banco de dados
 	mysqli_close($link);
 ?>
-		<input type="button" value="Voltar" onClick="history.go(-1)">
 		<input type="button" value="Atualizar" onClick="history.go(-0)">
 </body>
 </html>
