@@ -29,7 +29,7 @@
 				<!--FORMULÁRIO DE LOGIN-->
 				<div id="login">
 					<form method="post" action="index2.php"> 
-						<h1>Controle de Acesso</h1> 
+						<h1><strong>Controle de Acesso</strong></h1> 
 						<!--em desenvolvimento
 						<p> 
 							<label for="usuario">Usuário:</label>

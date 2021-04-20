@@ -7,38 +7,38 @@
 	<body>		
 			<form action="insert.php" method="post">
 				<table>
-					<tr></br><td colspan="2">Cadastro de Visitantes</td>
+					<tr></br><td colspan="2"><strong>Cadastro de Visitantes</strong></td>
 					</tr>
 					<tr>
-					<td>Nome*:</td>
+					<td><strong>Nome*:</strong></td>
 						<td><input type="text" name="nome" required size = 50 maxlength=45></td>
 					</tr>
 					<tr>
-						<td>CPF*:</td>
+						<td><strong>CPF*:</strog></td>
 						<td><input type="text" name="cpf" required size = 50 maxlength=14 placeholder="000.000.000-00"></td>
 					</tr>
 					<tr>
-						<td>Identidade*:</td>
+						<td><strong>Identidade*:</strong></td>
 						<td><input type="text" name="rg" required size = 50 maxlength=15></td>
 					</tr>
 					<tr>
-						<td>Destino*:</td>
+						<td><strong>Destino*:</strong></td>
 						<td><input type="text" name="destino" required size = 50 maxlength="5" placeholder="Digite o número do apto."></td>
 					</tr>
 					<tr>
-						<td>Veículo:</td>
+						<td><strong>Veículo:</strong></td>
 						<td><input type="text" name="veiculo" size = 50 placeholder="Informe o modelo do veiculo"></td>
 					</tr>
 					<tr>
-						<td>Placa:</td>
+						<td><strong>Placa:</strong></td>
 						<td><input type="text" name="placa" size = 50 maxlength="8"></td>
 					</tr>
 					<tr>
-						<td>Empresa:</td>
+						<td><strong>Empresa:</strong></td>
 						<td><input type="text" name="empresa" size = 50 ></td>
 					</tr>
 					<tr>
-						<td>Tipo*:</td>
+						<td><strong>Tipo*:</strong></td>
 						<td>
 							<select name="tipo" id="tipo" required> 
 								<option value="" selected></option>   
@@ -48,7 +48,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Observação:</td>
+						<td><strong>Observação:</strong></td>
 						<td><textarea name="observacao" cols="52" rows="5" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
 					</tr>
 				</table>
