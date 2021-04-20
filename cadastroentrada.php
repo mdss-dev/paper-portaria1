@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Cadastro de Visitantes</title>
+		<title>Cadastro de Entrada</title>
 	</head>
 	<body>		
 			<form action="insert.php" method="post">
 				<table>
-					<tr></br><td colspan="2"><strong>Cadastro de Visitantes</strong></td>
+					<tr></br><td colspan="2"><strong>Cadastro de Entrada</strong></td>
 					</tr>
 					<tr>
 					<td><strong>Nome*:</strong></td>
