@@ -1,3 +1,6 @@
+body {
+  background-color: #f5ededee;
+}
 #menu ul {
     padding:0px;
     margin:0px;
@@ -42,6 +45,7 @@ p{
 label{
   color: #405c60;
   position: relative;
+  display: inline;
 }
 /*
 input {

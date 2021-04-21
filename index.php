@@ -21,7 +21,9 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>CONTROLE DE ACESSO - Página Inicial</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<script src="lib/bootstrap/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="container" >

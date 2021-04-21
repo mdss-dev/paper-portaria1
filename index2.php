@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Cadastro de Visitantes - Página Inicial</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<script src="lib/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body>
 				<nav id="menu">
@@ -18,7 +20,7 @@
 					$valor = @$_GET['p'];
 					if ($valor == 'cadastroentrada') {require_once 'cadastroentrada.php';}
 					if ($valor == 'cadastrosaida') {require_once 'cadastrosaida.php';}
-					if ($valor =='consulta') {require_once 'consulta.php';}							
+					if ($valor == 'consulta') {require_once 'filtroconsulta.php';}							
 				?>
 
 	</body>

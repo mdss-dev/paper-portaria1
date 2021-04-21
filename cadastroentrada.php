@@ -3,18 +3,21 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Cadastro de Entrada</title>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+		<script src="lib/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body>		
 			<form action="insert.php" method="post">
 				<table>
-					<tr></br><td colspan="2"><strong>Cadastro de Entrada</strong></td>
+					<tr><td colspan="2"><strong>Cadastro de Entrada</strong></td>
 					</tr>
 					<tr>
 					<td><strong>Nome*:</strong></td>
 						<td><input type="text" name="nome" required size = 50 maxlength=45></td>
 					</tr>
 					<tr>
-						<td><strong>CPF*:</strog></td>
+						<td><strong>CPF*:</strong></td>
 						<td><input type="text" name="cpf" required size = 50 maxlength=14 placeholder="000.000.000-00"></td>
 					</tr>
 					<tr>

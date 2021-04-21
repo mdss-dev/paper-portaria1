@@ -40,12 +40,13 @@
 	mysqli_close($link);
 
 ?>
+<button onclick="goBack()">Voltar</button>
 		<script>
 			function goBack() {
 			    window.history.back()
 			}
 		</script>
 
-		<button onclick="goBack()">Voltar</button>
+		
 
 		
