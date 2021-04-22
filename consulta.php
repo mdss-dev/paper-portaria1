@@ -106,8 +106,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Consulta Visitantes</title>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
@@ -117,7 +119,7 @@
 			// se o número de resultados for maior que zero, mostra os dados
 			if($dados -> num_rows > 0) {
 		?>	
-		<table class="table">
+		<table class="table table-striped tables-sm table-responsive table-hover">
 			<thead>
 					<tr>
 						<th scope="col">Código</th>
@@ -155,12 +157,13 @@
 						?>
 						<td><?=$dataent?></td>
 						<?php 
-							$dataaux = $linha['datasaida'];
-							if ($dataaux != "") {
-							$dataaux = $dataaux->format('d/m/Y H:i:s');
+							$datasai = $linha['datasaida'];
+							if ($datasai != "") {
+							$datasai = new DateTime($linha['datasaida']);
+							$datasai = $datasai->format('d/m/Y H:i:s');
 							}
 						?>
-						<td><?=$dataaux?></td>
+						<td><?=$datasai?></td>
 					</tr>
 					<?php
 					// finaliza o loop que vai mostrar os dados
@@ -177,7 +180,7 @@
 // Fecha conexão com o banco de dados
 	mysqli_close($link);
 	?>
-	<input type="button" value="Atualizar" onClick="history.go(-0)">
-	<input type="button" value="Voltar" onClick="history.go(-1)">
+	<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
+	<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 	// chamar o arquivo de conexão com o BD
 	require_once "conexao.php";
-	$query = "select codigo,nome,dataentrada FROM visita where datasaida is null;";
+	$query = "select codigo,nome,dataentrada,datasaida FROM visita where datasaida is null;";
 	
 	// executa a query
 	$dados = mysqli_query($link, $query) or die(mysql_error());
@@ -13,7 +13,10 @@
 <html>
 	<head>
 		<title>Registrar Saida</title>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
@@ -23,7 +26,7 @@
 				// se o número de resultados for maior que zero, mostra os dados
 				if($dados -> num_rows > 0) {
 			?>	
-			<table class="table">
+			<table class="table table-striped tables-sm table-responsive table-hover">
 				<thead>
 					<tr>
 						<th scope="col">Código</th>
@@ -46,7 +49,10 @@
 								<td><?=$data?></td>
 								<td>
 									<div class="gravarsaida">
-										<button class="btn btn-success" type="submit" onclick="saida.php">Registrar Saida</button>
+										<form action="saida.php" method="post">
+											<input type="hidden" name="codigo" value=<?php echo $linha['codigo']?>>
+											<button type="submit" class = "btn btn-success">Gravar Saída</button>
+										</form>
 									</div>
 								</td>
 							</tr>	
@@ -66,6 +72,6 @@
 // Fecha conexão com o banco de dados
 		mysqli_close($link);
 		?>
-		<input type="button" value="Atualizar" onClick="history.go(-0)">
+		<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
 	</body>
 </html>

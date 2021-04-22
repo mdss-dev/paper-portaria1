@@ -1,29 +1,16 @@
-<!-- Alterado para exibir tela inicial
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="ISO-8859-1">
-		<title>Cadastro de Visitantes - Página Inicial</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-	</head>
-	<body>
-		<nav id="menu">
-			<ul>
-				<li><a href="index2.php">Cadastro de Visitantes</a></li>
-			</ul>
-		</nav>
-		<br><br>
-	</body>
-</html>
--->
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>CONTROLE DE ACESSO - Página Inicial</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
+
+
 	</head>
 	<body>
 		<div class="container" >

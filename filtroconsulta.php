@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
@@ -63,9 +63,9 @@
 						<td><input type="text" id="calendario4" name="datasaidafim" size=10 maxlength="10" placeholder="Fim"></td>
 				</table>			
 			</tr>
-		</table>
-		<input type="submit" value= "Pesquisar" name="Pesquisa"><br>
-		<input type="button" value="Limpar" onClick="history.go(-0)">
+		</table></br>
+		<button type="submit" value= "Pesquisar" class = "btn btn-success" name="Pesquisa">Pesquisar</button>
+		<button type="button" value="Limpar" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>
 	</form>
 <script type="text/javascript">
 $(function() {

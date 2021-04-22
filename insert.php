@@ -38,7 +38,6 @@
 			
 	// Fecha conexão com o banco de dados
 	mysqli_close($link);
-
 ?>
 <button onclick="goBack()">Voltar</button>
 		<script>

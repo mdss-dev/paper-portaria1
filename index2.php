@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Cadastro de Visitantes - Página Inicial</title>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"> 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>

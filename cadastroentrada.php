@@ -3,9 +3,13 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Cadastro de Entrada</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 	</head>
 	<body>		
 			<form action="insert.php" method="post">
@@ -52,13 +56,12 @@
 					</tr>
 					<tr>
 						<td><strong>Observação:</strong></td>
-						<td><textarea name="observacao" cols="52" rows="5" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
+						<td><textarea name="observacao" cols="52" rows="2" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
 					</tr>
 				</table>
-				<br>
-				<strong>* - Campos obrigatórios</strong> <br><br>
-				<input type="submit" name="Enviar"><br>
-				<input type="button" value="Limpar" onClick="history.go(-0)">
+				<strong><h6>   * - Campos obrigatórios</h6></strong>
+				<button type="submit" class = "btn btn-success" name="Enviar">Enviar</button>
+				<button type="button" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>
 			</form>
 	</body>
 </html>
