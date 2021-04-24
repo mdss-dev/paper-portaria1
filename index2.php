@@ -10,7 +10,9 @@
 		<script src="lib/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-	<body>
+	<body>	
+			<div class=container>
+				<hr>
 				<nav id="menu">
 					<ul>
 						<li><a href="index2.php?p=cadastroentrada">Registrar Entrada</a></li>
@@ -25,7 +27,8 @@
 					if ($valor == 'cadastrosaida') {require_once 'cadastrosaida.php';}
 					if ($valor == 'consulta') {require_once 'filtroconsulta.php';}							
 				?>
-
+				<hr>
+			</div>
 	</body>
 </html>
 

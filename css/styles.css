@@ -23,10 +23,25 @@ body {
 }
 
 .content{
-  width: 500px;
-  min-height: 560px;    
-  margin: 0px auto;
-  position: relative;   
+	width: 500px;
+	min-height: 560px;    
+	margin: 0px auto;
+	position: relative;   
+}
+
+header {
+	display:block;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	text-align:center;
+	padding: 20px 0;
+}
+
+main{
+  margin-top:80px;
+  color:white;
 }
 
 h1{
@@ -47,16 +62,7 @@ label{
   position: relative;
   display: inline;
 }
-/*
-input {
-  outline: none;
-  width: 95%;
-  margin-top: 4px;
-  padding: 10px;    
-  border: 1px solid #b2b2b2;
-}
-*/
-/*estilo do botão submit */
+
 input[type="submit"]{
   font-size: 20px;
   width: 478px;

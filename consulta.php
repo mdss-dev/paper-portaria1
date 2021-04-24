@@ -109,17 +109,28 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-		<script src="lib/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 <body>
-<p><strong>Consulta Visitas</strong></p>
+	<hr>
+	<header>
+		<div class "conteiner">
+			<strong>Consulta Visitas</strong>
+		</div>
+		<hr>
+		<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
+		<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
+		<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>
+	</header>
+	<hr>
+	<main>
 		<?php
 			// se o número de resultados for maior que zero, mostra os dados
 			if($dados -> num_rows > 0) {
 		?>	
-		<table class="table table-striped tables-sm table-responsive table-hover">
+		<table class="table table-sm table-responsive-sm table-hover">
 			<thead>
 					<tr>
 						<th scope="col">Código</th>
@@ -180,7 +191,6 @@
 // Fecha conexão com o banco de dados
 	mysqli_close($link);
 	?>
-	<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
-	<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
+	</main>
 </body>
 </html>

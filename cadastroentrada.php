@@ -6,12 +6,13 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-		<script src="lib/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	</head>
 	<body>		
+		<hr>
 			<form action="insert.php" method="post">
 				<table>
 					<tr><td colspan="2"><strong>Cadastro de Entrada</strong></td>
@@ -59,6 +60,7 @@
 						<td><textarea name="observacao" cols="52" rows="2" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
 					</tr>
 				</table>
+				<hr>
 				<strong><h6>   * - Campos obrigatórios</h6></strong>
 				<button type="submit" class = "btn btn-success" name="Enviar">Enviar</button>
 				<button type="button" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>

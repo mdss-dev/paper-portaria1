@@ -28,24 +28,13 @@
 		$sql = "INSERT INTO visita (codigo, nome, cpf, rg, destino, veiculo, placa, empresa, tipo, observacao) 
 		VALUES ('$codigo', '$nome', '$cpf', '$rg', '$destino', '$veiculo', '$placa', '$empresa', '$tipo', '$observacao')";
 		if(mysqli_query($link, $sql)){	
-		
-		echo "<script>alert('Gravação efetuada com sucesso!'); window.location='index2.php'</script>";			
+		mysqli_close($link);
+		echo "<script>alert('Gravação efetuada com sucesso!'); window.location='index2.php?p=cadastroentrada'</script>";
 
 			} else{
-			
-			echo "<script>alert('Não foi possivel realizar a gravação');</script>";			
+			mysqli_close($link);
+			echo "<script>alert('Não foi possivel realizar a gravação'); window.location='index2.php?p=cadastroentrada'</script>";
 			}
-			
-	// Fecha conexão com o banco de dados
-	mysqli_close($link);
-?>
-<button onclick="goBack()">Voltar</button>
-		<script>
-			function goBack() {
-			    window.history.back()
-			}
-		</script>
-
-		
+?>		
 
 		
