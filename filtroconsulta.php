@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Consulta Visitantes</title>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -13,40 +14,42 @@
 	<hr>
 	<form action="consulta.php" method="post">
 		<table>
-			<tr><td colspan="2"><strong>Filtro de Pesquisa</strong></td>
+			<tr><td colspan="2"><p><strong>Filtro de Pesquisa</strong></p></td>
 			</tr>
 			<tr>
-				<td><strong>Nome:</strong></td>
-				<td><input type="text" name="nome"></td>
-				<td><strong>CPF:</strong></td>
-				<td><input type="text" name="cpf"></td>
-				<td><strong>Identidade:</strong></td>
-				<td><input type="text" name="rg"></td>
-			</tr>
-			<tr>
-				<td></td>
-			</tr>
-			<tr>
-				<td><strong>Destino:</strong></td>
-				<td><input type="text" name="destino"></td>
-				<td><strong>Veículo:</strong></td>
-				<td><input type="text" name="veiculo"></td>
-				<td><strong>Placa:</strong></td>
-				<td><input type="text" name="placa"></td>
+				<td><p><strong>Nome:</strong></p></td>
+				<td><p><input type="text" name="nome"></p></td>
+				<td><p><strong>CPF:</strong></p></td>
+				<td><p><input type="text" name="cpf"></p></td>
+				<td><p><strong>Identidade:</strong></p></td>
+				<td><p><input type="text" name="rg"></p></td>
 			</tr>
 			<tr>
 				<td></td>
 			</tr>
 			<tr>
-				<td><strong>Empresa:</strong></td>
-				<td><input type="text" name="empresa"></td>
-				<td><strong>Tipo:</strong></td>
+				<td><p><strong>Destino:</strong></td>
+				<td><p><input type="text" name="destino"></p></td>
+				<td><p><strong>Veículo:</strong></p></td>
+				<td><p><input type="text" name="veiculo"></p></td>
+				<td><p><strong>Placa:</strong></p></td>
+				<td><p><input type="text" name="placa"></p></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td><p><strong>Empresa:</strong></p></td>
+				<td><p><input type="text" name="empresa"></p></td>
+				<td><p><strong>Tipo:</strong></p></td>
 				<td>
-					<select name="tipo" id="tipo"> 
-						<option value="" selected></option>   
-						<option value="Prestador de Servico">Prestador de Servico</option>
-						<option value="Visitante">Visitante</option>
-					</select>
+					<p>
+						<select name="tipo" id="tipo"> 
+							<option value="" selected></option>   
+							<option value="Prestador de Servico">Prestador de Servico</option>
+							<option value="Visitante">Visitante</option>
+						</select>
+					</p>
 				</td>	
 			</tr>
 			<tr>

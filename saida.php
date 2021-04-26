@@ -4,7 +4,6 @@
 	
 	// Atualiza a data de saída do visitante
 	$codigo = isset($_POST['codigo']) ? $_POST['codigo'] : '';
-	$datasaida = isset($_POST['datasaida']) ? $_POST['datasaida'] : '';
 	
 	$sql = "UPDATE visita SET datasaida=now() WHERE codigo='$codigo'";
 	

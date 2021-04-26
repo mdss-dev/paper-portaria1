@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Registrar Saida</title>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -30,7 +31,6 @@
 			<table class="table table-striped tables-sm table-responsive table-hover">
 				<thead>
 					<tr>
-						<th scope="col">Código</th>
 						<th scope="col">Nome</th>
 						<th scope="col">Data da Entrada</th>
 						<th scope="col">Registrar Saida</th>
@@ -41,7 +41,6 @@
 					do {
 						?>
 							<tr>
-								<td><?=$linha['codigo']?></td> 
 								<td><?=$linha['nome']?></td>
 								<?php 
 									$data = new DateTime($linha['dataentrada']);

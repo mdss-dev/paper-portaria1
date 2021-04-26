@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="utf8">
 		<title>CONTROLE DE ACESSO - Página Inicial</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
@@ -12,7 +12,7 @@
 	</head>
 	<body>
 	<br>
-		<div class="container" >
+		<div class="container" id="div">
 			<div class="content">      
 				<!--FORMULÁRIO DE LOGIN-->
 				<div id="login">

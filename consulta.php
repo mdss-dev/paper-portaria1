@@ -106,6 +106,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
@@ -114,54 +115,37 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 <body>
-	<hr>
 	<header>
-		<div class "conteiner">
-			<strong>Consulta Visitas</strong>
-		</div>
-		<hr>
-		<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
-		<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
-		<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>
+			<div><p align="center"><strong>Consulta Visitas</strong></p></div>
+			<p align="right">
+				<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
+				<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>			
+			</p>
 	</header>
-	<hr>
-	<main>
+	<br><br>
+	<main class="container">
+		
 		<?php
 			// se o número de resultados for maior que zero, mostra os dados
 			if($dados -> num_rows > 0) {
-		?>	
-		<table class="table table-sm table-responsive-sm table-hover">
-			<thead>
-					<tr>
-						<th scope="col">Código</th>
-						<th scope="col">Nome</th>
-						<th scope="col">CPF</th>
-						<th scope="col">RG</th>
-						<th scope="col">Destino</th>
-						<th scope="col">Veículo</th>
-						<th scope="col">Placa</th>
-						<th scope="col">Empresa</th>
-						<th scope="col">Tipo</th>
-						<th scope="col">Observação</th>
-						<th scope="col">Data Entrada</th>
-						<th scope="col">Data Saída</th>
-					</tr>
-			</thead>
-			<tbody>
+		?>
+			<table class="table table-sm table-responsive-sm table-hover">
+				<thead>
+				<tr>
+					<th scope="col">Nome</th>
+					<th scope="col">CPF</th>
+					<th scope="col">Data Entrada</th>
+					<th scope="col">Data Saída</th>
+					<th scope="col">Ação</th>
+				</tr>			
+				</thead>
+		<tbody>
 		<?php	
 				do {
 		?>
 					<tr>
-						<td><?=$linha['codigo']?></td> 
 						<td><?=$linha['nome']?></td>
 						<td><?=$linha['cpf']?></td>
-						<td><?=$linha['rg']?></td>
-						<td><?=$linha['destino']?></td>
-						<td><?=$linha['veiculo']?></td>
-						<td><?=$linha['placa']?></td>
-						<td><?=$linha['empresa']?></td>
-						<td><?=$linha['tipo']?></td>
-						<td><?=$linha['observacao']?></td>
 						<?php 
 							$dataent = new DateTime($linha['dataentrada']);
 							$dataent = $dataent->format('d/m/Y H:i:s');
@@ -175,13 +159,21 @@
 							}
 						?>
 						<td><?=$datasai?></td>
+						<td>
+							<div class="vermais">
+								<form action="vermais.php" method="post">
+									<input type="hidden" name="codigo" value=<?php echo $linha['codigo']?>>
+										<button type="submit" class = "btn btn-outline-success" id="<?php echo $linha['codigo']?>" >Ver mais...</button>
+								</form>
+							</div>
+						</td>
 					</tr>
 					<?php
 					// finaliza o loop que vai mostrar os dados
 					}while($linha = $dados -> fetch_assoc());
 				}
 				else {
-						echo "<strong> Não há registro para ser exibido</strong><br><br>";
+						echo "<div class='container'><br><br><strong><p>Não há registro para ser exibido</p></strong><br><br></div>";
 					}
 					?>
 			</tbody>

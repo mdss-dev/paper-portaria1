@@ -12,21 +12,10 @@
 		$empresa = mysqli_real_escape_string($link, $_REQUEST['empresa']);
 		$tipo = mysqli_real_escape_string($link, $_REQUEST['tipo']);
 		$observacao = mysqli_real_escape_string($link, $_REQUEST['observacao']);
-		$codigo = 1;
-		// pegando o próximo código (sem utilização de sequence do banco)
-		$sql = "SELECT MAX(codigo) AS codigo FROM visita";
-		if($result = mysqli_query($link, $sql)){
-			if(mysqli_num_rows($result) > 0){
-				if($row = mysqli_fetch_array($result)){
-					if (intval($row['codigo']) > 0){
-						$codigo = intval($row['codigo']) + 1;
-					}
-				}
-			}
-		}
+
 		// Realiza inserção do novo registro na tabela do banco de dados
-		$sql = "INSERT INTO visita (codigo, nome, cpf, rg, destino, veiculo, placa, empresa, tipo, observacao) 
-		VALUES ('$codigo', '$nome', '$cpf', '$rg', '$destino', '$veiculo', '$placa', '$empresa', '$tipo', '$observacao')";
+		$sql = "INSERT INTO visita (nome, cpf, rg, destino, veiculo, placa, empresa, tipo, observacao) 
+		VALUES ('$nome', '$cpf', '$rg', '$destino', '$veiculo', '$placa', '$empresa', '$tipo', '$observacao')";
 		if(mysqli_query($link, $sql)){	
 		mysqli_close($link);
 		echo "<script>alert('Gravação efetuada com sucesso!'); window.location='index2.php?p=cadastroentrada'</script>";
@@ -35,6 +24,4 @@
 			mysqli_close($link);
 			echo "<script>alert('Não foi possivel realizar a gravação'); window.location='index2.php?p=cadastroentrada'</script>";
 			}
-?>		
-
-		
+?>
