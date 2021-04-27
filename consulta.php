@@ -107,6 +107,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="shortcut icon"  href="img/icone.png">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
@@ -114,12 +115,12 @@
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-<body>
+<body class="img">
 	<header>
 			<div><p align="center"><strong>Consulta Visitas</strong></p></div>
 			<p align="right">
-				<button type="button" class = "btn btn-success" value="Atualizar" onClick="history.go(-0)">Atualizar</button>
-				<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>			
+				<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>	
+				<a href="index2.php"><button type="button" class = "btn btn-success" value="Novo" >Tela Inicial</button></a>		
 			</p>
 	</header>
 	<br><br>
@@ -163,7 +164,7 @@
 							<div class="vermais">
 								<form action="vermais.php" method="post">
 									<input type="hidden" name="codigo" value=<?php echo $linha['codigo']?>>
-										<button type="submit" class = "btn btn-outline-success" id="<?php echo $linha['codigo']?>" >Ver mais...</button>
+										<button type="submit" class = "btn btn-success" id="<?php echo $linha['codigo']?>" >Ver mais...</button>										
 								</form>
 							</div>
 						</td>
@@ -173,7 +174,7 @@
 					}while($linha = $dados -> fetch_assoc());
 				}
 				else {
-						echo "<div class='container'><br><br><strong><p>Não há registro para ser exibido</p></strong><br><br></div>";
+						echo "<div class='container'><br><br><strong><p>Não há registro(s) para ser(em) exibido(s) com o(s) critério(s) informado(s)</p></strong><br><br></div>";
 					}
 					?>
 			</tbody>

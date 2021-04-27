@@ -13,6 +13,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="shortcut icon"  href="img/icone.png">
 		<title>Registrar Saida</title>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -62,7 +63,7 @@
 				// fim do if
 				}
 				else {
-					echo "<strong>Não há registro(s) com saída(s) pendente(s)</strong><br><br>";
+					echo "<strong>Não há registro com saída pendente</strong><br><br>";
 				}
 			?>
 				</tbody>

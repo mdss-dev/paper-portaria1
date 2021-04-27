@@ -18,13 +18,21 @@
     color: #6D6D6D;
     border-bottom:3px solid #EA0000;
 }
-
-body {
-  background-color: #EDEDED;
+#linha {
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #EDEDED;
+    padding: 20px 0;
 }
-
-
-
+.img { /* imagem do fundo  */
+      background-image: url(../img/fundo.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 .content{
 	width: 500px;
 	min-height: 560px;    
@@ -81,4 +89,3 @@ input[type="submit"]{
 input[type="submit"]:hover {
     background-color:#D6D6D6;
     color: #6D6D6D;
-}

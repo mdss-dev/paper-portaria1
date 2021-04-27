@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf8">
+		<link rel="shortcut icon"  href="img/icone.png">
 		<title>CONTROLE DE ACESSO - Página Inicial</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
@@ -10,7 +11,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/bootstrap.min.js"></script>
 	</head>
-	<body>
+	<body class="img">
 	<br>
 		<div class="container" id="div">
 			<div class="content">      

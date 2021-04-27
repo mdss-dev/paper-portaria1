@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="shortcut icon"  href="img/icone.png">
 		<title>Cadastro de Visitantes - Página Inicial</title>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -10,7 +11,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-	<body>
+	<body class="img">
 			<div class=container>
 				<hr>
 				<nav id="menu">

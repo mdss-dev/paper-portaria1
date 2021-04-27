@@ -23,6 +23,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="shortcut icon"  href="img/icone.png">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
@@ -30,7 +31,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-	<body>
+	<body class="img">
 		<!--div class="container">
 			<hr><p><strong>Consulta Detalhes da Visita</strong></p><hr>
 			<p></p>
@@ -46,14 +47,18 @@
 			<p><strong>Entrada: </strong><?//=$dataent?></p>
 			<p><strong>Saída: </strong><?//=$datasai?></p>
 			
-		</div-->
-		<div class="container">
+		</div-->		
+		<div class="container">			
 			<div class="contant">
-				<hr><p><strong>Consulta Detalhes da Visita</strong></p><hr>
+					<header>
+							<p align="center"><strong>Consulta Detalhes da Visita</strong></p>
+					</header>
+				
+				<br><br><br><br>
 				<div>
 					<table>
 						<tr>
-							<td><p><strong>Nome:</strong></P></td>
+							<td><p><strong>Nome:</strong></p></td>
 							<td><p><?=$linha['nome']?></p><td>
 						</tr>
 						<tr>
@@ -62,7 +67,6 @@
 							<td><p><strong>Identidade:</strong></p></td>
 							<td><p><?=$linha['rg']?></p></td>
 						</tr>
-						<tr></tr>
 						<tr>
 							<td><p><strong>Veículo:</strong></p></td>
 							<td><p><?=$linha['veiculo']?></p></td>
@@ -85,12 +89,26 @@
 					<table>
 						<tr>
 							<td><p><strong>tipo:</strong></p></td>
-							<td><p><?=$linha['cpf']?></p></td>
+							<td><p><?=$linha['tipo']?></p></td>
+						</tr>
+						<tr>
 							<td><p><strong>Empresa:</strong></p></td>
 							<td><p><?=$linha['empresa']?></p></td>
 						</tr>
 					</table>
 				</div>
+				<hr>
+				<div>
+					<table>
+						<tr>
+							<td><p><strong>Entrada:</strong></p></td>
+							<td><p><?=$linha['dataentrada']?></p></td>
+						</tr>
+						<tr>
+							<td><p><strong>Saída:</strong></p></td>
+							<td><p><?=$linha['datasaida']?></p></td>
+						</tr>
+					</table>
 				<hr>
 				<div>
 					<table>
