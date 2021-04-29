@@ -7,9 +7,11 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>		
 	</head>
 	<body class="img">		
 		<hr>
@@ -23,7 +25,7 @@
 					</tr>
 					<tr>
 						<td><p><strong>CPF*:</strong></p></td>
-						<td><p><input type="text" name="cpf" required size = 50 maxlength=14 placeholder="000.000.000-00"></p></td>
+						<td><p><input type="text" name="cpf" id="cpf" required size = 50 maxlength=11></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Identidade*:</strong></p></td>
@@ -39,7 +41,7 @@
 					</tr>
 					<tr>
 						<td><p><strong>Placa:</strong></p></td>
-						<td><p><input type="text" name="placa" size = 50 maxlength="8"></p></td>
+						<td><p><input type="text" name="placa" id="placa"size = 50 maxlength="8"></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Empresa:</strong></p></td>
@@ -66,6 +68,11 @@
 				<strong><p><h6>   * - Campos obrigatórios</h6></p></strong>
 				<button type="submit" class = "btn btn-success" name="Enviar">Enviar</button>
 				<button type="button" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>
-			</form>
+			</form>	
+			<!--criação de mascara-->
+			<script type="text/javascript">			
+				$("#cpf").mask("000.000.000-00")
+				$("#placa").mask("AAA-0000")			
+		</script>	
 	</body>
 </html>

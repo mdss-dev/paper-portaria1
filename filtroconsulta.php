@@ -7,9 +7,11 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
 	</head>
 <body>	
 	<hr>
@@ -21,7 +23,7 @@
 				<td><p><strong>Nome:</strong></p></td>
 				<td><p><input type="text" name="nome"></p></td>
 				<td><p><strong>CPF:</strong></p></td>
-				<td><p><input type="text" name="cpf"></p></td>
+				<td><p><input type="text" name="cpf" id="cpf"></p></td>
 				<td><p><strong>Identidade:</strong></p></td>
 				<td><p><input type="text" name="rg"></p></td>
 			</tr>
@@ -34,7 +36,7 @@
 				<td><p><strong>Veículo:</strong></p></td>
 				<td><p><input type="text" name="veiculo"></p></td>
 				<td><p><strong>Placa:</strong></p></td>
-				<td><p><input type="text" name="placa"></p></td>
+				<td><p><input type="text" name="placa" id="placa"></p></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -96,5 +98,12 @@ $(function() {
 	});
 });
 </script>
+
+<!--mascara de campos--> 
+<script type="text/javascript">
+	$("#cpf").mask("000.000.000-00")
+	$("#placa").mask("AAA-0000")
+</script>	
+
 </body>
 </html>

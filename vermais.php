@@ -102,11 +102,11 @@
 					<table>
 						<tr>
 							<td><p><strong>Entrada:</strong></p></td>
-							<td><p><?=$linha['dataentrada']?></p></td>
+							<td><p><?=$dataent?></p></td>
 						</tr>
 						<tr>
 							<td><p><strong>Saída:</strong></p></td>
-							<td><p><?=$linha['datasaida']?></p></td>
+							<td><p><?=$datasai?></p></td>
 						</tr>
 					</table>
 				<hr>

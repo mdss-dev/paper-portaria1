@@ -119,6 +119,8 @@
 	<header>
 			<div><p align="center"><strong>Consulta Visitas</strong></p></div>
 			<p align="right">
+				
+				<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
 				<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>	
 				<a href="index2.php"><button type="button" class = "btn btn-success" value="Novo" >Tela Inicial</button></a>		
 			</p>
