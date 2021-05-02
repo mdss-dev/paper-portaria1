@@ -21,37 +21,37 @@
 					</tr>
 					<tr>
 					<td><p><strong>Nome*:</strong><p></td>
-						<td><p><input type="text" name="nome" required size = 50 maxlength=45></p></td>
+						<td><p><input type="text" class="form-control" name="nome" required size = 50 maxlength=45></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>CPF*:</strong></p></td>
-						<td><p><input type="text" name="cpf" id="cpf" required size = 50 maxlength=11></p></td>
+						<td><p><input type="text" class="form-control" name="cpf" id="cpf" required size = 50 maxlength=11 placeholder="Apenas números"></p></td>
 					</tr>
 					<tr>
-						<td><p><strong>Identidade*:</strong></p></td>
-						<td><p><input type="text" name="rg" required size = 50 maxlength=15></p></td>
+						<td><p><strong>Identidade:</strong></p></td>
+						<td><p><input type="text" class="form-control" name="rg" size = 50 maxlength=15></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Destino*:</strong></p></td>
-						<td><p><input type="text" name="destino" required size = 50 maxlength="5" placeholder="Digite o número do apto."></p></td>
+						<td><p><input type="text" class="form-control" name="destino" required size = 50 maxlength="5" placeholder="Digite o número do apto."></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Veículo:</strong></p></td>
-						<td><p><input type="text" name="veiculo" size = 50 placeholder="Informe o modelo do veiculo"></p></td>
+						<td><p><input type="text" class="form-control" name="veiculo" size = 50 placeholder="Informe o modelo do veiculo"></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Placa:</strong></p></td>
-						<td><p><input type="text" name="placa" id="placa"size = 50 maxlength="8"></p></td>
+						<td><p><input type="text" class="form-control" name="placa" id="placa"size = 50 maxlength="8"></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Empresa:</strong></p></td>
-						<td><p><input type="text" name="empresa" size = 50 ></p></td>
+						<td><p><input type="text" class="form-control" name="empresa" size = 50 ></p></td>
 					</tr>
 					<tr>
 						<td><p><strong>Tipo*:</strong></p></td>
 						<td>
 							<p>
-								<select name="tipo" id="tipo" required> 
+								<select class="form-control" name="tipo" id="tipo" required> 
 									<option value="" selected></option>   
 									<option value="Prestador de Servico">Prestador de Serviço</option>
 									<option value="Visitante">Visitante</option>
@@ -61,7 +61,7 @@
 					</tr>
 					<tr>
 						<td><strong>Observação:</strong></td>
-						<td><textarea name="observacao" cols="52" rows="3" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
+						<td><textarea name="observacao" class="form-control" cols="52" rows="3" placeholder="Limite de 100 caracteres" maxlength="100"></textarea></td>
 					</tr>
 				</table>
 				<hr>
