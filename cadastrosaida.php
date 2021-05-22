@@ -29,7 +29,7 @@
 				// se o número de resultados for maior que zero, mostra os dados
 				if($dados -> num_rows > 0) {
 			?>	
-			<table class="table table-striped tables-sm table-responsive table-hover">
+			<table class="table tables-sm table-responsive table-hover">
 				<thead>
 					<tr>
 						<th scope="col">Nome</th>

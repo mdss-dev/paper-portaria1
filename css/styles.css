@@ -27,7 +27,7 @@
     background-color: #EDEDED;
     padding: 20px 0;
 }
-.img { /* imagem do fundo  */
+.img { 
       background-image: url(../img/fundo.jpg);
       background-attachment: fixed;
       background-repeat: no-repeat;

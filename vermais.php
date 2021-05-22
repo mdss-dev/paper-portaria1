@@ -88,7 +88,7 @@
 				<div>
 					<table>
 						<tr>
-							<td><p><strong>tipo:</strong></p></td>
+							<td><p><strong>Tipo:</strong></p></td>
 							<td><p><?=$linha['tipo']?></p></td>
 						</tr>
 						<tr>
