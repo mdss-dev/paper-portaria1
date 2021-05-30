@@ -73,7 +73,6 @@
 			<!--script que cria as mascaras para os campos-->
 			<script type="text/javascript">			
 				$("#cpf").mask("000.000.000-00")
-				$("#placa").mask("AAA-0000")			
 		</script>	
 	</body>
 </html>

@@ -36,7 +36,7 @@
 				<td><p><strong>Veículo:</strong></p></td>
 				<td><p><input type="text" class="form-control" name="veiculo"></p></td>
 				<td><p><strong>Placa:</strong></p></td>
-				<td><p><input type="text" class="form-control" name="placa" id="placa" onkeypress="$(this).mask('AAA-0000');"></p></td>
+				<td><p><input type="text" class="form-control" name="placa" id="placa"></p></td>
 			</tr>
 			<tr>
 				<td></td>
