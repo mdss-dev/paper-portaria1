@@ -5,20 +5,27 @@
 	// recebe dados do filtro
 	$codigo = isset($_POST['codigo']) ? $_POST['codigo'] : '';
 	
-	//inicializa consulta
+	//Consulta no banco de dados o registro selecionado pelo usuário
 	$query="select * from visita WHERE codigo = $codigo;";
 	$dados = mysqli_query($link, $query);
 	
 	// transforma os dados em um array
 	$linha = $dados -> fetch_assoc();
+	
+	//formata a data de entrada recuperada do banco de dados
 	$dataent = new DateTime($linha['dataentrada']);
 	$dataent = $dataent->format('d/m/Y H:i:s');
+	
+	//formata a data de saida recuperada do banco de dados. Se não estiver preenchida exibe valor em branco.
 	$datasai = $linha['datasaida'];
 	if ($datasai != "") {
 		$datasai = new DateTime($linha['datasaida']);
 		$datasai = $datasai->format('d/m/Y H:i:s');
 	}
+	// Fecha conexão com o banco de dados
+	mysqli_close($link);
 ?>
+<!--Início da exibição do resultado -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,22 +39,6 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body class="img">
-		<!--div class="container">
-			<hr><p><strong>Consulta Detalhes da Visita</strong></p><hr>
-			<p></p>
-			<p><strong>CPF: </strong></p>
-			<p><strong>Identidade: </strong><?//=$linha['rg']?></p>
-			<hr>
-			<p><strong>Destino: </strong><?//=$linha['destino']?></p>
-			<p><strong>Veículo: </strong><?//=$linha['veiculo']?></p>
-			<p><strong>Placa: </strong><?//=$linha['placa']?></p>
-			<p><strong>Empresa: </strong><?//=$linha['empresa']?></p>
-			<p><strong>Tipo: </strong><?//=$linha['tipo']?></p>
-			<p><strong>Observacao: </strong><?//=$linha['observacao']?></p>
-			<p><strong>Entrada: </strong><?//=$dataent?></p>
-			<p><strong>Saída: </strong><?//=$datasai?></p>
-			
-		</div-->		
 		<div class="container">			
 			<div class="contant">
 					<header>
@@ -118,18 +109,10 @@
 						</tr>
 					</table>
 				</div>
-
-
-
-								
 				<hr>
 				<button type="button" class = "btn btn-success" value="Voltar" onClick="history.go(-1)">Voltar</button>
 				<a href="index2.php?p=consulta"><button type="button" class = "btn btn-success" value="Novo" >Nova Consulta</button></a>			
 			</div>
 		</div>
-		<?php
-			// Fecha conexão com o banco de dados
-			mysqli_close($link);
-		?>
 	</body>
 </html>

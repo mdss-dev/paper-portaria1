@@ -26,9 +26,10 @@
 		<hr>
 		<p><strong>Registrar saídas</strong></p>
 			<?php
-				// se o número de resultados for maior que zero, mostra os dados
+				// se houver alguma linha no resultado da consulta, monta a tabela que irá exibir os dados
 				if($dados -> num_rows > 0) {
 			?>	
+			<!--Cria tabela para exibir os resultados-->
 			<table class="table tables-sm table-responsive table-hover">
 				<thead>
 					<tr>
@@ -38,7 +39,8 @@
 					</tr>
 				</thead>
 				<tbody>
-			<?php	// inicia o loop que vai mostrar todos os dados
+			<?php	
+					//inicio do loop que irá exibir as linhas da tabela com os resultados
 					do {
 						?>
 							<tr>
@@ -58,10 +60,10 @@
 								</td>
 							</tr>	
 						<?php
-						// finaliza o loop que vai mostrar os dados
+						// loop que irá exibir todas as linhas do vetor com o resultado da consulta no banco de dados.
 						}while($linha = $dados -> fetch_assoc());
-				// fim do if
 				}
+				// se não houver linha no resultado da consulta, exibe mensagem
 				else {
 					echo "<strong>Não há registro com saída pendente</strong><br><br>";
 				}

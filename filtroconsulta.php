@@ -14,6 +14,7 @@
 	</head>
 <body>	
 	<hr>
+	<!--Cria formulário para o usuário preencher os campos a serem pesquisados-->
 	<form action="consulta.php" method="post">
 		<table>
 			<tr><td colspan="2"><p><strong>Filtro de Pesquisa</strong></p></td>
@@ -74,6 +75,7 @@
 		<button type="button" value="Limpar" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>
 	</form>
 <script type="text/javascript">
+//função para formatar e exibir os campos de data no formato de calendário
 $(function() {
     $( "#calendario1" ).datepicker({
 		dateFormat: 'dd/mm/yy',

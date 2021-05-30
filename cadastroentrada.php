@@ -15,6 +15,7 @@
 	</head>
 	<body class="img">		
 		<hr>
+			<!--Cria formulário para cadastro de entrada-->
 			<form action="insert.php" method="post">
 				<table>
 					<tr><td colspan="2"><strong><p>Cadastro de Entrada</p></strong></td>
@@ -69,7 +70,7 @@
 				<button type="submit" class = "btn btn-success" name="Enviar">Enviar</button>
 				<button type="button" class = "btn btn-success" onClick="history.go(-0)">Limpar</button>
 			</form>	
-			<!--criação de mascara-->
+			<!--script que cria as mascaras para os campos-->
 			<script type="text/javascript">			
 				$("#cpf").mask("000.000.000-00")
 				$("#placa").mask("AAA-0000")			
